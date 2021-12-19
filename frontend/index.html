@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>CL</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Track your climbing progress with our Climbing Logger! Now you can keep track of your climbing accomplishments and push yourself to send your projects.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/Samuel-DeSantis/js-portfolio-project" class="text-white text-decoration-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg> Github</a>
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://medium.com/" class="text-white text-decoration-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16">
+                    <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+                  </svg> Medium</a>
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/" class="text-white text-decoration-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                  </svg> Youtube</a>
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer" href="mailto:samuel.i.desantis@gmail.com" class="text-white text-decoration-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg> Email</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <div class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+              <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+            </svg>
+            <strong>Climbing Logger</strong>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-5 text-center container has-bg-img">
+        <img class="bg-img img-fluid" src="unsplash-img.jpg">
+        <p class="text-muted">Photo by <a class="text-muted" href="https://unsplash.com/@sedae?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eliz Šeda</a> on <a class="text-muted " href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light"><b>My Climbs</b></h1>
+            <p class="lead text-muted">Set goals, climb your routes, add climbs to your collection! Watch as your collection grows and see how your climbing ability improves.</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
+
+            <!-- Climbs go here! -->
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">Thanks for checking out the Climbing Logger!</p>
+        <!-- <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p> -->
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

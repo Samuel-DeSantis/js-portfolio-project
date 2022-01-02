@@ -12,10 +12,10 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <title>CL</title>
 
   </head>
   <body>
-    
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -69,15 +69,42 @@
 
     <main>
       <section class="py-5 text-center container has-bg-img">
-        <img class="bg-img img-fluid" src="unsplash-img.jpg">
+        <img class="bg-img img-fluid" src="./images/stock/unsplash-img.jpg">
         <p class="text-muted">Photo by <a class="text-muted" href="https://unsplash.com/@sedae?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eliz Šeda</a> on <a class="text-muted " href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light"><b>My Climbs</b></h1>
             <p class="lead text-muted">Set goals, climb your routes, add climbs to your collection! Watch as your collection grows and see how your climbing ability improves.</p>
             <p>
-              <a href="#" class="btn btn-primary my-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+              <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Add a Climb</button>
+              <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+              <!-- Button trigger modal -->
+              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+              </button> -->
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Add a Climb</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
             </p>
           </div>
         </div>
@@ -86,10 +113,10 @@
       <div class="album py-5 bg-light">
         <div class="container">
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
+          <div id="myClimbs" class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
 
             <!-- Climbs go here! -->
-
+            
           </div>
         </div>
       </div>
@@ -106,5 +133,6 @@
       </div>
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

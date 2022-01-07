@@ -92,15 +92,47 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <form>
-
-
+                      <form id="newClimb">
+                        <div class="row g-3 align-items-center">
+                          <div class="col-auto">
+                            <label for="location" class="col-form-label">Location</label>
+                          </div>
+                          <div class="col-auto">
+                            <input type="text" id="location" class="form-control" >
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-auto">
+                            <label for="difficulty" class="col-form-label">Difficulty</label>
+                          </div>
+                          <div class="col-auto">
+                            <input type="text" id="difficulty" class="form-control">
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-auto">
+                            <label for="ascents" class="col-form-label">Ascents</label>
+                          </div>
+                          <div class="col-auto">
+                            <input type="text" id="ascents" class="form-control">
+                          </div>
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                          <label for="description" class="form-label">Description</label>
+                          <input type="textarea" class="form-control" id="description">
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                          <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                       </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -116,7 +148,7 @@
           <div id="myClimbs" class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
 
             <!-- Climbs go here! -->
-            
+
           </div>
         </div>
       </div>

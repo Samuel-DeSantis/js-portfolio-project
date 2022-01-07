@@ -1,7 +1,62 @@
-const addBtn = document.querySelector('#new-climb-btn')
-const climbForm = document.querySelector('.container')
-let addClimb = false
-let divCollect = document.querySelector('#climb-collection')
+const CLIMBING_LOGGER_URL = "http://localhost:3000/climbs"
+
+document.addEventListener('DOMContentLoaded', () => {
+    getClimbs().then(results => console.log(results))
+})
+
+function getClimbs () {
+    return fetch(CLIMBING_LOGGER_URL)
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.error(error))
+}
+
+function addClimb (e) {
+    
+    data = {
+        location: location,
+        difficulty: difficulty,
+        ascents: ascents,
+        description: description
+    }
+
+    fetch(CLIMBING_LOGGER_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+        })
+    .then(response => response.json())
+    .then(result => console.log(result))
+}
+
+
+
+
+
+
+
+
+// const addBtn = document.querySelector('#new-climb-btn')
+// const newClimb = document.getElementById("newClimb")
+
+// let addClimb = false
+// let divCollect = document.querySelector('#climb-collection')
+
+// newClimb.addEventListener('submit', function (e) {
+//     e.preventDefault();
+
+//     const formData = new FormData(this)
+
+//     console.log(formData)
+
+//     // fetch('http://localhost:3000/climbs', {method: 'POST', body: formData})
+//     // .then(response => response.text())
+//     // .then(text => console.log(text))
+//     // .catch(error => console.error(error))
+// })
 
 function myFunc() {
     let climbPost = 
@@ -13,7 +68,8 @@ function myFunc() {
                 "<div class='d-flex justify-content-between align-items-center'>" +
                     "<div class='btn-group'>" +
                         "<button type='button' class='btn btn-sm btn-outline-secondary'>Edit</button>" +
-                    "</div>" +
+                        "<button type='button' class='btn btn-sm btn-outline-secondary'>Remove</button>" +
+                        "</div>" +
                     "<small class='text-muted'>9 mins</small>" +
                 "</div>" +
             "</div>" +
@@ -27,43 +83,43 @@ function myFunc() {
     // document.getElementById("myClimbs").appendChild(para);
 }
 
-function getClimbs () {
-    return fetch('http://localhost:3000/climbs')
-    .then(response => response.json())
-    .then(object => console.log(object))
-}
+// function getClimbs () {
+//     return fetch('http://localhost:3000/climbs')
+//     .then(response => response.json())
+//     .then(object => console.log(object))
+// }
 
-function postClimb () {
+// function postClimb () {
 
-}
+// }
 
-function testRenderClimb () {
-    let divCol = document.createElement('div').setAttribute('class', 'col')
-    let divCardShadowSM = document.createElement('div').setAttribute('class', 'card shadow-sm')
-    let divThumbnail = document.createElement('div')
-    document.getElementById("myClimbs").appendChild(divCol);
+// function testRenderClimb () {
+//     let divCol = document.createElement('div').setAttribute('class', 'col')
+//     let divCardShadowSM = document.createElement('div').setAttribute('class', 'card shadow-sm')
+//     let divThumbnail = document.createElement('div')
+//     document.getElementById("myClimbs").appendChild(divCol);
 
-}
+// }
 
-function renderClimb () {
-    let divCol = document.createElement('div').setAttribute('class', 'col')
-    let divCardShadowSM = document.createElement('div').setAttribute('class', 'card shadow-sm')
-    let divThumbnail = document.createElement('div')
-    renderThumbnail()
-}
+// function renderClimb () {
+//     let divCol = document.createElement('div').setAttribute('class', 'col')
+//     let divCardShadowSM = document.createElement('div').setAttribute('class', 'card shadow-sm')
+//     let divThumbnail = document.createElement('div')
+//     renderThumbnail()
+// }
 
-addBtn.addEventListener('click', () => {
-    addClimb = !addClimb
-    if (addClimb) {
-        climbForm.style.display = 'block'
-        climbForm.addEventListener('submit', event => {
-            event.preventDefault()
-            postClimb(event.target)
-            })
-    } else {
-        climbForm.style.display = 'none'
-    }
-})
+// addBtn.addEventListener('click', () => {
+//     addClimb = !addClimb
+//     if (addClimb) {
+//         climbForm.style.display = 'block'
+//         climbForm.addEventListener('submit', event => {
+//             event.preventDefault()
+//             postClimb(event.target)
+//             })
+//     } else {
+//         climbForm.style.display = 'none'
+//     }
+// })
 
 // function renderThumbnail () {
 //     divThumbnail.setAttribute('class', 'bd-placeholder-img card-img-top')

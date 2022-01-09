@@ -1,23 +1,30 @@
-const CLIMBING_LOGGER_URL = "http://localhost:3000/climbs"
+const CLIMBING_LOGGER_URL = "http://localhost:3000/climbs";
+const newClimbForm = document.getElementById('newClimb')
+let myData = 0
 
 document.addEventListener('DOMContentLoaded', () => {
-    getClimbs().then(results => console.log(results))
+    getClimbs()
 })
+
+newClimbForm.addEventListener('submit', addClimb)
 
 function getClimbs () {
     return fetch(CLIMBING_LOGGER_URL)
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => recordedClimb(json))
     .catch(error => console.error(error))
 }
 
-function addClimb (e) {
+
+function addClimb () {
     
     data = {
-        location: location,
-        difficulty: difficulty,
-        ascents: ascents,
-        description: description
+        climb: {
+            location: event.target.dataset.location,
+            difficulty: event.target.dataset.difficulty,
+            ascents: event.target.dataset.ascents,
+            description: event.target.dataset.description
+        }
     }
 
     fetch(CLIMBING_LOGGER_URL, {
@@ -27,12 +34,44 @@ function addClimb (e) {
             "Accept": "application/json"
         },
         body: JSON.stringify(data)
-        })
+    })
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => console.log('Success:', result))
+    .then(error => console.log('Error:', error))
 }
 
+function recordedClimb(data) {
 
+    console.log(data)
+
+    for (let i = 0; i < data.length; i++) {
+
+        let climbPost = 
+        "<div class='col'>" +
+           "<div class='card shadow-sm'>" +
+                "<div class='card-body'>" +
+                    `<p class='card-text'>Location: ${data[i].location}<br>Ascents: ${data[i].ascents}<br>Difficulty: ${data[i].difficulty}<br>Description: ${data[i].description}</p>` +
+                    "<div class='d-flex justify-content-between align-items-center'>" +
+                        "<div class='btn-group'>" +
+                            "<button type='button' class='btn btn-sm btn-outline-secondary'>Edit</button>" +
+                            `<button type='button' onclick='removeClimb(${data[i].id})' class='btn btn-sm btn-outline-secondary' data-toggle="tooltip" data-placement="bottom" title="Click to Remove this Climb">Remove</button>` +
+                        "</div>" +
+                    "</div>" +
+                "</div>" +
+            "</div>" +
+        "</div>";
+
+        document.getElementById("myClimbs").innerHTML += climbPost;
+    }
+}
+
+function removeClimb (id) {
+    return fetch(CLIMBING_LOGGER_URL+`/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        }}).then(()=>{window.location.reload()})
+}
 
 
 
@@ -58,30 +97,7 @@ function addClimb (e) {
 //     // .catch(error => console.error(error))
 // })
 
-function myFunc() {
-    let climbPost = 
-    "<div class='col'>" +
-       "<div class='card shadow-sm'>" +
-            "<svg class='bd-placeholder-img card-img-top' width='100%' height='225' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Thumbnail' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#55595c'/><text x='50%' y='50%' fill='#eceeef' dy='.3em'>Thumbnail</text></svg>" +
-            "<div class='card-body'>" +
-                "<p class='card-text'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>" +
-                "<div class='d-flex justify-content-between align-items-center'>" +
-                    "<div class='btn-group'>" +
-                        "<button type='button' class='btn btn-sm btn-outline-secondary'>Edit</button>" +
-                        "<button type='button' class='btn btn-sm btn-outline-secondary'>Remove</button>" +
-                        "</div>" +
-                    "<small class='text-muted'>9 mins</small>" +
-                "</div>" +
-            "</div>" +
-        "</div>" +
-    "</div>";
 
-    document.getElementById("myClimbs").innerHTML += climbPost;
-
-    // var para = document.createElement("P");
-    // para.innerText = "This is a paragraph.";
-    // document.getElementById("myClimbs").appendChild(para);
-}
 
 // function getClimbs () {
 //     return fetch('http://localhost:3000/climbs')
@@ -120,15 +136,3 @@ function myFunc() {
 //         climbForm.style.display = 'none'
 //     }
 // })
-
-// function renderThumbnail () {
-//     divThumbnail.setAttribute('class', 'bd-placeholder-img card-img-top')
-//     divThumbnail.setAttribute('width', '100%')
-//     divThumbnail.setAttribute('height', '225')
-//     divThumbnail.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-//     divThumbnail.setAttribute('role', 'img')
-//     divThumbnail.setAttribute('aria-label', 'Placeholder: Thumbnail')
-//     divThumbnail.setAttribute('preserveAspectRatio', 'xMidYMid slice')
-//     divThumbnail.setAttribute('focusable', 'false')
-//     divThumbnail.setAttribute('focusable', 'false')
-// }

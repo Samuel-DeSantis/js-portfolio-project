@@ -7,13 +7,10 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>CL</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
-
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <title>CL</title>
-
   </head>
   <body>
     <header>
@@ -75,93 +72,74 @@
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light"><b>My Climbs</b></h1>
             <p class="lead text-muted">Set goals, climb your routes, add climbs to your collection! Watch as your collection grows and see how your climbing ability improves.</p>
-            <p>
-              <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Add a Climb</button>
-              <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
-              <!-- Button trigger modal -->
-              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-              </button> -->
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Add a Climb</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="newClimb">
-                        <div class="row g-3 align-items-center">
-                          <div class="col-auto">
-                            <label for="location" class="col-form-label">Location</label>
-                          </div>
-                          <div class="col-auto">
-                            <input type="text" id="location" class="form-control" >
-                          </div>
+            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="bottom" title="Click to Add a New Climb">Add a Climb</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Climb</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="newClimb">
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="location" class="col-form-label">Location</label>
                         </div>
-                        <div class="row g-3 align-items-center">
-                          <div class="col-auto">
-                            <label for="difficulty" class="col-form-label">Difficulty</label>
-                          </div>
-                          <div class="col-auto">
-                            <input type="text" id="difficulty" class="form-control">
-                          </div>
+                        <div class="col-auto">
+                          <input type="text" id="location" class="location" >
                         </div>
-                        <div class="row g-3 align-items-center">
-                          <div class="col-auto">
-                            <label for="ascents" class="col-form-label">Ascents</label>
-                          </div>
-                          <div class="col-auto">
-                            <input type="text" id="ascents" class="form-control">
-                          </div>
+                      </div>
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="difficulty" class="col-form-label">Difficulty</label>
                         </div>
-                        <br>
-                        <div class="mb-3">
-                          <label for="description" class="form-label">Description</label>
-                          <input type="textarea" class="form-control" id="description">
+                        <div class="col-auto">
+                          <input type="text" id="difficulty" class="form-control">
                         </div>
-                        <br>
-                        <div class="mb-3">
-                          <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="ascents" class="col-form-label">Ascents</label>
                         </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="col-auto">
+                          <input type="text" id="ascents" class="form-control">
                         </div>
-                      </form>
-                    </div>
-
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="textarea" class="form-control" id="description">
+                      </div>
+                      <br>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-            
-            </p>
+            </div>
           </div>
         </div>
       </section>
+      <section>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div id="myClimbs" class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
 
-      <div class="album py-5 bg-light">
-        <div class="container">
+              <!-- Climbs go here! -->
 
-          <div id="myClimbs" class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
-
-            <!-- Climbs go here! -->
-
+            </div>
           </div>
         </div>
-      </div>
-
+      </section>
     </main>
-
     <footer class="text-muted py-5">
       <div class="container">
-        <p class="float-end mb-1">
-          <a href="#">Back to top</a>
-        </p>
+        <p class="float-end mb-1"><a href="#">Back to top</a></p>
         <p class="mb-1">Thanks for checking out the Climbing Logger!</p>
-        <!-- <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p> -->
       </div>
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>

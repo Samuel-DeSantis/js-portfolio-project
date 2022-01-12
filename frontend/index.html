@@ -67,7 +67,7 @@
     <main>
       <section class="py-5 text-center container has-bg-img">
         <img class="bg-img img-fluid" src="./images/stock/unsplash-img.jpg">
-        <p class="text-muted">Photo by <a class="text-muted" href="https://unsplash.com/@sedae?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eliz Šeda</a> on <a class="text-muted " href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        <p class="text-muted">Photo by <a target="_blank" title="See more from this photographer" class="text-muted" href="https://unsplash.com/@sedae?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eliz Šeda</a> on <a target="_blank" title="Check out Unsplash" class="text-muted " href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light"><b>My Climbs</b></h1>
@@ -87,7 +87,7 @@
                           <label for="location" class="col-form-label">Location</label>
                         </div>
                         <div class="col-auto">
-                          <input type="text" id="location" name="location" class="location" >
+                          <input type="text" id="location" name="location" class="form-control" >
                         </div>
                       </div>
                       <div class="row g-3 align-items-center">
@@ -121,6 +121,58 @@
                 </div>
               </div>
             </div>
+
+            <div class="modal fade" id="exampleEditModal" tabindex="-1" aria-labelledby="exampleEditModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Climb</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="editClimb">
+                      <div class="row g-3 align-items-center">
+                        <p id="editID" hidden></p>
+                        <div class="col-auto">
+                          <label for="editLocation" class="col-form-label">Location</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" id="editLocation" name="editLocation" class="form-control" >
+                        </div>
+                      </div>
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="editDifficulty" class="col-form-label">Difficulty</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" id="editDifficulty" name="editDifficulty" class="form-control">
+                        </div>
+                      </div>
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="editAscents" class="col-form-label">Ascents</label>
+                        </div>
+                        <div class="col-auto">
+                          <input type="text" id="editAscents" name="editAscents" class="form-control">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <label for="editDescription" class="form-label">Description</label>
+                        <input type="textarea" class="form-control" id="editDescription" name="form-control">
+                      </div>
+                      <br>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </section>

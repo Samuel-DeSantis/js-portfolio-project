@@ -2,11 +2,11 @@
 
 ## Objectives
 
-[X] [Project Summary](id="section_1")
-[X] [Getting Started](id="section_2")
-[X] [Design](id="section_3")
-[X] [Challenges](id="section_4")
-[X] [Conclusion](id="section_4")
+- [X] [Project Summary](id="section_1")
+- [X] [Getting Started](id="section_2")
+- [X] [Design](id="section_3")
+- [X] [Challenges](id="section_4")
+- [X] [Conclusion](id="section_4")
 
 ## <a id="section_1">Project Summary</a>
 The inspiration for this project comes from my favorite hobby, rock climbing. I thought it'd would be a cool idea to design a website where I could log my climbs to keep track of my progress and achievements. My goal was to create a clean and easy to use where I could log my climbs quickly and also see how my progress builds with every climb I add.
